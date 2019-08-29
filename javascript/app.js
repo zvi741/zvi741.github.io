@@ -29,16 +29,15 @@ function navOpener() {
 
 var i = 0;
 var txt = "בואו נגרום לו גם להיראות כך";
-console.log(txt.length);
 var speed = 150;
 var speedd = 1500;
 var forward = true;
 window.onload = function () {
-    typeWriter();
-    console.log
+    setTimeout(typeWriter, 500);
 };
 
 function typeWriter() {
+
     if (forward) {
         if (i < txt.length) {
             document.getElementById("look_good").innerHTML += txt.charAt(i);
@@ -56,11 +55,13 @@ function typeWriter() {
             txt = txt.slice(0, -1);
             document.getElementById("look_good").innerHTML = txt;
             i--;
-            setTimeout(typeWriter, speed);
             if (i == 0) {
+                setTimeout(typeWriter, speedd);
                 forward = true;
                 txt = "בואו נגרום לו גם להיראות כך";
-            };
+            } else {
+                setTimeout(typeWriter, speed);
+            }
         };
     };
 };

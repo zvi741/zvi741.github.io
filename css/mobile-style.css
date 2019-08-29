@@ -24,9 +24,12 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 1000px;
+    /*height: 2000px;*/
     display: flex;
     flex-direction: column;
+    font-family: 'Assistant',
+        Arial,
+        sans-serif;
 }
 
 a {
@@ -101,7 +104,7 @@ li {
 
 .nav-container {
     width: 100%;
-    position: absolute;
+    position: fixed;
     display: flex;
     background-color: #1e3b49;
     justify-content: flex-end;
@@ -125,9 +128,7 @@ li {
     text-align: right;
     padding-bottom: 12px;
     font-size: 25px;
-    font-family: 'Assistant',
-        Arial,
-        sans-serif;
+
     transition: 0.3s;
     color: #18a1b9;
     font-weight: 600;
@@ -141,22 +142,24 @@ li {
 .page {
     display: flex;
     justify-content: center;
+    /*border: 1px solid red;*/
 }
 
 .home {
-    height: 86vh;
+    height: 100vh;
     align-items: flex-start;
 }
 
-.home-wrap {
-    height: 50vh;
+.home-container {
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
-.page .home-wrap span {
+.page .home-container span {
     display: block;
     text-align: center;
     font-family: 'Assistant',
@@ -164,15 +167,15 @@ li {
         sans-serif;
 }
 
-.home-wrap .buisness {
+.home-container .buisness {
     font-size: 35px;
     font-weight: 900;
     color: #ffffff;
 }
 
-.home-wrap .good {
+.home-container .good {
     font-size: 25px;
-    min-height: 30px;
+    min-height: 33px;
     color: #18a1b9;
     margin: 0 auto;
     border-left: solid 3px #18a1b9;
@@ -189,4 +192,27 @@ li {
     to {
         border-left-color: transparent;
     }
+}
+
+.porfolio {
+    background-color: white;
+    flex-direction: column;
+
+}
+
+.porfolio span {
+    color: #152b35;
+    text-align: right;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 40px;
+    border-right: 4px solid #18a1b9;
+    margin: 8vh 4vh 3vh 0;
+    padding: 0 2vh 2vh 0vh;
+}
+
+.portfoilio-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0 4vh 2vh 4vh;
 }
