@@ -24,6 +24,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -36,9 +39,13 @@ li {
 
 .main-wrapper {
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-container {
+    height: 13vh;
     z-index: 1;
     position: relative;
     color: #18a1b9;
@@ -54,7 +61,14 @@ li {
     justify-content: space-between;
 }
 
-.icon-container {
+.menu .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .icon-container {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -82,10 +96,6 @@ li {
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.icon {
-    cursor: pointer;
 }
 
 .nav-container {
@@ -119,7 +129,7 @@ li {
         sans-serif;
     transition: 0.3s;
     color: #18a1b9;
-    font-weight: 600; 
+    font-weight: 600;
     display: block;
 }
 
@@ -127,3 +137,55 @@ li {
     color: #f1f1f1;
 }
 
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.home {
+    height: 86vh;
+    align-items: flex-start;
+}
+
+.home-wrap {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .home-wrap span {
+    display: block;
+    text-align: center;
+    font-family: 'Assistant',
+        Arial,
+        sans-serif;
+}
+
+.home-wrap .buisness {
+    font-size: 35px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.home-wrap .good {
+    font-size: 25px;
+    min-height: 30px;
+    color: #18a1b9;
+    margin: 0 auto;
+    border-left: solid 3px #18a1b9;
+    padding-left: 1px;
+    white-space: pre;
+    animation: animated-cursor 600ms steps(29, end) infinite;
+}
+
+@keyframes animated-cursor {
+    from {
+        border-left-color: #18a1b9;
+    }
+
+    to {
+        border-left-color: transparent;
+    }
+}

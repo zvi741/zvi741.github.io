@@ -15,18 +15,19 @@
     <div class="main-wrapper">
         <div class='menu-container'>
             <div class="menu">
-                <img src="./images/logo.png" alt="TZ" style='max-width: 50px'>
-                <div class="icon-container" onclick="myFunction(this)">
+                <div class="img-container">
+                    <img src="./images/logo.png" alt="TZ" style='max-width: 50px; max-height: 50px'>
+                </div>
+                <div class="icon-container" id="menu-icon" onclick="myFunction(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
-                <div class="icon" id="menu-icon" style="font-size: 36px;">&#9776;</div>
-                
+                <!--<div class="icon" style="font-size: 36px;">&#9776;</div>-->
             </div>
+            <!--menu-->
         </div>
         <!--menu-container1-->
-
         <nav class="nav-container" id="nav">
             <ul class="navbar">
                 <li><a href="#">דף הבית</a></li>
@@ -37,10 +38,9 @@
         </nav>
 
         <section class="home page">
-
             <div class="home-wrap">
-                <span class="buisness">העסק שלכם מקצועי</span>
-                <span class="good"></span>
+                <span class="buisness">!העסק שלכם מקצועי</span>
+                <span class="good" id="look_good"></span>
             </div>
 
         </section>

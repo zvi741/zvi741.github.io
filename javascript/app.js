@@ -9,23 +9,58 @@ function myFunction(x) {
 }
 
 function navOpener() {
-    alert(document.getElementsByTagName('html')[0].innerHTML);
-    console.log("hi");
+    
     menu_icon = document.getElementById("menu-icon");
     menu_icon.addEventListener("click", function () {
 
         if (nav_is_open == false) {
 
-            document.getElementById("nav").style.transform = "translate(0, 0)";
+            document.getElementById("nav").style.transform = "translate(0, 70px)";
             nav_is_open = true;
-            console.log("opened");
-
         } else {
 
             document.getElementById("nav").style.transform = "translate(0, -500px)";
             nav_is_open = false;
-            console.log("closed");
         }
     });
 }
 
+/*alert(document.getElementsByTagName('html')[0].innerHTML);*/
+
+var i = 0;
+var txt = "בואו נגרום לו גם להיראות כך";
+console.log(txt.length);
+var speed = 150;
+var speedd = 1500;
+var forward = true;
+window.onload = function () {
+    typeWriter();
+    console.log
+};
+
+function typeWriter() {
+    if (forward) {
+        if (i < txt.length) {
+            document.getElementById("look_good").innerHTML += txt.charAt(i);
+            i++;
+
+            if (i == txt.length) {
+                forward = false;
+                setTimeout(typeWriter, speedd);
+            } else {
+                setTimeout(typeWriter, speed);
+            }
+        };
+    } else {
+        if (i > 0) {
+            txt = txt.slice(0, -1);
+            document.getElementById("look_good").innerHTML = txt;
+            i--;
+            setTimeout(typeWriter, speed);
+            if (i == 0) {
+                forward = true;
+                txt = "בואו נגרום לו גם להיראות כך";
+            };
+        };
+    };
+};
