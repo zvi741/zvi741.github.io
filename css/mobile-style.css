@@ -18,12 +18,19 @@ section {
     display: block;
 }
 html {
-    background: url("..\\images\\background.jpg") no-repeat center center fixed;
+    background: url("..\\images\\mobile-background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+@media(max-width: 600px) {
+    html {
+        background: url("..\\images\\desktop-background.jpg") no-repeat center center fixed;
+    }
+}
+
 
 body {
     
@@ -219,3 +226,5 @@ li {
     max-height: 100%;
     padding: 0 4vh 2vh 4vh;
 }
+
+
