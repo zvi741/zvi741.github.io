@@ -26,3 +26,5 @@ function navOpener() {
         }
     });
 }
+
+alert(document.getElementsByTagName('html')[0].innerHTML);
