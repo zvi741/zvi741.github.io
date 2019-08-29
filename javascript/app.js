@@ -15,7 +15,7 @@ function navOpener() {
 
         if (nav_is_open == false) {
 
-            document.getElementById("nav").style.transform = "translate(0, 70px)";
+            document.getElementById("nav").style.transform = "translate(0, 13vh)";
             nav_is_open = true;
         } else {
 
