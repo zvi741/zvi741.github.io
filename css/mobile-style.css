@@ -19,11 +19,11 @@ section {
 }
 
 body {
-    /*background: url("..\\images\\background.jpg") no-repeat center center fixed;
+    background: url("..\\images\\background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;*/
+    background-size: cover;
 }
 
 a {
@@ -35,6 +35,7 @@ li {
 }
 
 .main-wrapper {
+    position: relative;
 }
 
 .menu-container {
@@ -53,11 +54,43 @@ li {
     justify-content: space-between;
 }
 
+.icon-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 3.5px;
+    background-color: #18a1b9;
+    margin: 3.5px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .icon {
     cursor: pointer;
 }
 
 .nav-container {
+    width: 100%;
+    position: absolute;
     display: flex;
     background-color: #1e3b49;
     justify-content: flex-end;
