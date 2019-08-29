@@ -9,6 +9,8 @@ function myFunction(x) {
 }
 
 function navOpener() {
+    alert(document.getElementsByTagName('html')[0].innerHTML);
+    console.log("hi");
     menu_icon = document.getElementById("menu-icon");
     menu_icon.addEventListener("click", function () {
 
@@ -27,4 +29,3 @@ function navOpener() {
     });
 }
 
-alert(document.getElementsByTagName('html')[0].innerHTML);
