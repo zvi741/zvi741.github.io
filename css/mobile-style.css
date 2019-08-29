@@ -17,18 +17,19 @@ nav,
 section {
     display: block;
 }
+
 html {
     background: url("..\\images\\mobile-background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: auto;
 }
 
 @media(min-width: 600px) {
-    /*.background-img*/
     html {
         background: url("..\\images\\desktop-background.jpg") no-repeat center center fixed;
+        background-size: cover;
     }
 }
 
