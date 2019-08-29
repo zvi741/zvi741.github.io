@@ -25,7 +25,8 @@ html {
     background-size: cover;
 }
 
-@media(max-width: 600px) {
+@media(min-width: 600px) {
+    /*.background-img*/
     html {
         background: url("..\\images\\desktop-background.jpg") no-repeat center center fixed;
     }
@@ -33,7 +34,6 @@ html {
 
 
 body {
-    
     /*height: 2000px;*/
     display: flex;
     flex-direction: column;
@@ -49,6 +49,14 @@ a {
 li {
     list-style-type: none;
 }
+
+.background-img {
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+
 
 .main-wrapper {
     position: relative;
