@@ -45,9 +45,10 @@ li {
 }
 
 .menu-container {
+    width: 100%;
     height: 13vh;
     z-index: 1;
-    position: relative;
+    position: fixed;
     color: #18a1b9;
     background-color: #152b35;
     padding: 10px 20px;
