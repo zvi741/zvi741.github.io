@@ -23,13 +23,14 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: auto;
+    background-size: 100vh;
 }
 
 @media(min-width: 600px) {
     html {
         background: url("..\\images\\desktop-background.jpg") no-repeat center center fixed;
         background-size: cover;
+
     }
 }
 
@@ -235,5 +236,3 @@ li {
     max-height: 100%;
     padding: 0 4vh 2vh 4vh;
 }
-
-
