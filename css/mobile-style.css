@@ -93,14 +93,29 @@ li {
 }
 
 .menu .icon-container {
-    cursor: pointer;
+    /*cursor: pointer;*/
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 15;
+    /*background-color: #f1f1f1;*/
 }
 
 .noselect {
-    
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+
     -webkit-user-select: none;
     /* Safari 3.1+ */
     -moz-user-select: none;
@@ -109,6 +124,23 @@ li {
     /* IE 10+ */
     user-select: none;
     /* Standard syntax */
+}
+
+.bar12,
+.bar22,
+.bar32 {
+    width: 30px;
+    height: 3.5px;
+    background-color: #18a1b9;
+    margin: 3.5px 0;
+    transition: 0.4s;
+}
+
+.menu .icon-container2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .bar1,
