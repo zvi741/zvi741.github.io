@@ -1,5 +1,9 @@
 var nav_is_open = false;
 
+function cl (x) {
+    console.log(x);
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
     navOpener();
 });
@@ -9,7 +13,7 @@ function myFunction(x) {
 }
 
 function navOpener() {
-    
+
     menu_icon = document.getElementById("menu-icon");
     menu_icon.addEventListener("click", function () {
 
@@ -65,3 +69,28 @@ function typeWriter() {
         };
     };
 };
+
+/*console.log($(document).height() / 2);*/
+
+function inView(el) {
+    let box = el.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom >= 0;
+}
+
+if (document.getElementById("portfoilio").classList.contains("hiiii")) {
+    cl("hiiii");
+ }
+
+$(window).scroll(function () {
+    var x = document.getElementsByClassName("portfoilio-img-container");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x[i].classList.contains("fadein-animation")) {
+            true;
+        }else if (inView(x[i])) {
+            x[i].classList.add("fadein-animation");
+            console.log(x + "in view");
+        };
+    };
+});
+
