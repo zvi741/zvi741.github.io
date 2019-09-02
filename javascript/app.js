@@ -82,7 +82,7 @@ if (document.getElementById("portfoilio").classList.contains("hiiii")) {
  }
 
 $(window).scroll(function () {
-    var x = document.getElementsByClassName("hii");
+    var x = document.getElementsByClassName("portfoilio-img-container");
     var i;
     for (i = 0; i < x.length; i++) {
         if (x[i].classList.contains("fadein-animation")) {
