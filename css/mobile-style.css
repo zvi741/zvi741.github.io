@@ -276,23 +276,30 @@ li {
     padding: 0 2vh 2vh 0vh;
 }
 
+.portfoilio-img-container {
+    padding: 0 4vh 2vh 4vh;
+    /*transform: rotateY(180deg);*/
+}
+
 .portfoilio-img-container img {
     max-width: 100%;
     max-height: 100%;
-    padding: 0 4vh 2vh 4vh;
-    transform: rotateY(180deg);
-    z-index: -15;
 }
 
 .fadein-animation {
-    z-index: 0;
-    transform: rotateY(180deg);
+    visibility: visible;
+    transform: rotateY(360deg);
     transition: 1s;
-    
     animation: fadeInLeft 1000ms steps(29, end) both;
 }
+
 @keyframes fadeInLeft {
     0% {
+        opacity: 0;
+        /*transform: translateX(200px);*/
+    }
+
+    50% {
         opacity: 0;
         /*transform: translateX(200px);*/
     }
