@@ -88,7 +88,10 @@ $(window).scroll(function () {
         if (x[i].classList.contains("fadein-animation")) {
             true;
         }else if (inView(x[i])) {
-            x[i].classList.add("fadein-animation");
+            x[i].classList.add("apear");
+            setTimeout(x[i].classList.add("fadein-animation"), 300);
+            
+            cl(x[i].classList);
             console.log(x + "in view");
         };
     };
