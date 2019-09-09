@@ -1,11 +1,14 @@
 var nav_is_open = false;
 
-function cl (x) {
+function cl(x) {
     console.log(x);
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
     navOpener();
+    setTimeout(typeWriter, 500);
+    fadeInFunc("img-fader");
+    fadeInFunc("span-fader");
 });
 
 function myFunction(x) {
@@ -31,16 +34,18 @@ function navOpener() {
 
 /*alert(document.getElementsByTagName('html')[0].innerHTML);*/
 
+
 var i = 0;
 var txt = "בואו נגרום לו גם להיראות כך";
 var speed = 150;
 var speedd = 1500;
 var forward = true;
-window.onload = function () {
+/*window.onload = function () {
     setTimeout(typeWriter, 500);
-};
+};*/
 
 function typeWriter() {
+
 
     if (forward) {
         if (i < txt.length) {
@@ -77,21 +82,32 @@ function inView(el) {
     return box.top < window.innerHeight && box.bottom >= 0;
 }
 
-
-
-$(window).scroll(function () {
-    var x = document.getElementsByClassName("fader");
+function fadeInFunc(fadingInClass) {
+    var x = document.getElementsByClassName(fadingInClass);
     var i;
     for (i = 0; i < x.length; i++) {
-        if (x[i].classList.contains("fadein-animation")) {
+        if (x[i].classList.contains("img-fadein-animation")) {
             true;
-        }else if (inView(x[i])) {
-            x[i].classList.add("apear");
-            setTimeout(x[i].classList.add("fadein-animation"), 300);
-            
-            cl(x[i].classList);
-            console.log(x + "in view");
+        } else if (inView(x[i])) {
+            /*x[i].classList.add("apear");*/
+            if (x[i].tagName != "SPAN") {
+                setTimeout(x[i].classList.add("img-fadein-animation"), 300);
+            } else {
+                setTimeout(x[i].classList.add("span-fadein-animation"), 300);
+            };
         };
     };
+}
+
+window.onload = function () {
+/*
+    setTimeout(typeWriter, 500);
+    fadeInFunc("img-fader");
+    fadeInFunc("span-fader");*/
+};
+
+$(window).scroll(function () {
+    fadeInFunc("img-fader");
+    fadeInFunc("span-fader");
 });
 
