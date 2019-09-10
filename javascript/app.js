@@ -45,8 +45,6 @@ var forward = true;
 };*/
 
 function typeWriter() {
-
-
     if (forward) {
         if (i < txt.length) {
             document.getElementById("look_good").innerHTML += txt.charAt(i);
@@ -99,6 +97,13 @@ function fadeInFunc(fadingInClass) {
     };
 }
 
+function tiltButtonFunc (tiltingButton) {
+    var button = document.getElementById(tiltingButton);
+    if (inView(button)) {
+        setTimeout(button.classList.add("button-fadein-animation"), 300);
+    };
+}
+
 window.onload = function () {
 /*
     setTimeout(typeWriter, 500);
@@ -109,5 +114,6 @@ window.onload = function () {
 $(window).scroll(function () {
     fadeInFunc("img-fader");
     fadeInFunc("span-fader");
+    tiltButtonFunc("form-button");
 });
 
