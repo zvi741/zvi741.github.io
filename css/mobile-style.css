@@ -335,7 +335,7 @@ li {
 }
 
 .comments-container {
-    overflow-x: ;
+    overflow-x: scroll;
     display: flex;
     white-space: nowrap;
 }
@@ -478,9 +478,18 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0 6vw;
+    padding: 10px 6vw;
 }
 
-.form-container>input{
+.form-container>input {
     text-align: right;
+    font-size: 20px;
+    margin: 5px 0;
+    padding: 0 17px 3px 0;
+    border: none;
+    border-bottom: #18a1b9 2px solid;
+}
+
+.form-container>button{
+    width: auto;
 }
