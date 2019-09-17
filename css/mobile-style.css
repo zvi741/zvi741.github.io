@@ -334,6 +334,40 @@ li {
     }
 }
 
+.comments-container {
+    overflow-x: ;
+    display: flex;
+    white-space: nowrap;
+}
+
+.comment-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 0 20px;
+    min-width: 100vw;
+}
+
+.comment-container > span {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.comment-container > span:first-of-type {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.fi-star {
+    color: yellow;
+    display: inline;
+    font-size: 30px;
+    padding: 3px;
+}
+
 .lets-start {
     align-items: center;
 }
@@ -356,7 +390,6 @@ li {
 .lets-start-container span:first-of-type {
     font-size: 50px;
     font-weight: 700;
-
 }
 
 .form-button {
@@ -373,50 +406,43 @@ li {
     display: inline-block;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .button-fadein-animation {
     visibility: visible;
     transition: 1s;
-    animation: tiltIn 2000ms steps(29, end) both;
+    animation: tiltIn 1000ms steps(29, end) both;
 }
 
 @keyframes tiltIn {
+    /*0% {
+        opacity: 0;
+        /*transform: translateX(200px);*
+    }*/
+
     0% {
         opacity: 0;
-        transform: scale(0.5);
+        transform: rotate(20deg) scale(0.6);
         /*transform: translateX(200px);*/
     }
 
-    50% {
-        opacity: 0;
-        transform: rotate(20deg) scale(0.4);
-        /*transform: translateX(200px);*/
+    40% {
+        transform: rotate(-20deg) scale(1);
     }
 
     60% {
-        transform: rotate(-20deg) scale(1);
-    }
 
-    70% {
-
-        transform: rotate(20deg) scale(1);
+        transform: rotate(10deg);
     }
 
     80% {
-
-        transform: rotate(-20deg) scale(1);
-    }
-
-    90% {
-        transform: rotate(20deg) scale(1);
+        opacity: 1;
+        transform: rotate(-10deg);
     }
 
     100% {
-        opacity: 1;
-
-        transform: rotate(0deg) scale(1);
+        transform: rotate(0deg);
         /*transform: translateX(0);*/
     }
 }
@@ -441,4 +467,20 @@ li {
         sans-serif;
     font-size: 25px;
     color: #152b35;
+}
+
+.contact {
+    background-color: white;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 6vw;
+}
+
+.form-container>input{
+    text-align: right;
 }

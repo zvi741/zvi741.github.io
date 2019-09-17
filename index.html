@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tzvi Zarhin</title>
     <link rel="stylesheet" type="text/css" href=".\css\mobile-style.css" />
+    <link rel="stylesheet" type="text/css" href=".\fonts\foundation-icons\foundation-icons.css" />
     <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -41,14 +42,14 @@
         <!--menu-container1-->
         <nav class="nav-container" id="nav">
             <ul class="navbar">
-                <li><a href="#">דף הבית</a></li>
-                <li><a href="#">תיק עבודות</a></li>
-                <li><a href="#">קצת עלי</a></li>
-                <li><a href="#">צור קשר</a></li>
+                <li><a href="#home">דף הבית</a></li>
+                <li><a href="#portfolio">תיק עבודות</a></li>
+                <li><a href="#about">קצת עלי</a></li>
+                <li><a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
 
-        <section class="home page">
+        <section class="home page" id="home">
             <div class="home-container">
                 <span class="buisness">העסק שלכם מקצועי</span>
                 <span class="good" id="look_good"></span>
@@ -57,7 +58,7 @@
         </section>
         <!--home page-->
 
-        <section class="porfolio page ">
+        <section class="porfolio page" id="portfolio">
             <span class="page-span span-fader">תיק עבודות</span>
             <div class="portfoilio-img-container img-fader">
                 <img src="./images/page_image_1.jpg">
@@ -74,6 +75,37 @@
         </section>
         <!--porfolio page-->
 
+        <section class="lets-start comments page">
+            <div class="comments-container">
+                <div class="comment-container">
+                    <span>תותח</span>
+                    <span>Lorem ipsum dolor sit amet.</span>
+                    <div class="star-container" style="display: flex; flex-direction: row; justify-content: center">
+                        <i class="fi-star"></i>
+                    </div>
+                </div>
+                <div class="comment-container">
+                    <span>תותח</span>
+                    <span>Lorem ipsum dolor sit amet.</span>
+                    <div class="star-container" style="display: flex; flex-direction: row; justify-content: center">
+                        <i class="fi-star"></i>
+                        <i class="fi-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--comments page-->
+
+        <section class="about page" id="about">
+            <span class="page-span span-fader">קצת עלי</span>
+            <div class="about-container">
+                <img src="./images/logo.png" alt="TZ" style='width: 30vh; display: block;'>
+                <section class="page-section">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minus placeat inventore odit cupiditate voluptatum labore nesciunt quas ex eaque adipisci molestias qui beatae expedita accusamus similique commodi, veritatis ducimus quibusdam vel necessitatibus sit. Dolorem velit hic impedit ut dignissimos quae alias, corporis ab consequuntur rerum rem consectetur totam illo minus magni quibusdam, nulla adipisci obcaecati corrupti. Nulla tenetur iusto dolore quibusdam non perferendis, nihil doloremque facere sunt laudantium minima excepturi similique quaerat rerum optio ipsa quae pariatur provident suscipit doloribus itaque eaque officia accusantium amet? Eligendi iste illo repudiandae, dolorem sint soluta. Vero repellendus ut saepe. Distinctio, molestiae fugit.</section>
+            </div>
+
+        </section>
+        <!--about page-->
+
         <section class="lets-start page">
             <div class="lets-start-container">
                 <span>?צריכים אתר לעסק</span>
@@ -81,19 +113,20 @@
                 <button class="form-button" id="form-button">!בוא נתחיל</button>
             </div>
         </section>
+        <!--lets-start page-->
 
-        <section class="about page">
-            <span class="page-span span-fader">קצת עלי</span>
-            <div class="about-container">
-                <img src="./images/logo.png" alt="TZ" style='width: 30vh; display: block;'>
-                <section class="page-section">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minus placeat inventore odit cupiditate voluptatum labore nesciunt quas ex eaque adipisci molestias qui beatae expedita accusamus similique commodi, veritatis ducimus quibusdam vel necessitatibus sit. Dolorem velit hic impedit ut dignissimos quae alias, corporis ab consequuntur rerum rem consectetur totam illo minus magni quibusdam, nulla adipisci obcaecati corrupti. Nulla tenetur iusto dolore quibusdam non perferendis, nihil doloremque facere sunt laudantium minima excepturi similique quaerat rerum optio ipsa quae pariatur provident suscipit doloribus itaque eaque officia accusantium amet? Eligendi iste illo repudiandae, dolorem sint soluta. Vero repellendus ut saepe. Distinctio, molestiae fugit.</section>
+
+        <section class="contact page" id="contact">
+            <span class="page-span span-fader">צור קשר</span>
+            <div class="contact-form">
+                <form action="" class="form-container">
+                    <input type="text" placeholder="שם" name="name" required>
+                    <input type="email" placeholder="אימייל" name="email" required>
+                    <input type="text" placeholder="ההודעה" name="message" required>
+                    <button type="submit" class="form-button">שלח</button>
+                </form>
+
             </div>
-            
-        </section>
-        <!--about page-->
-
-        <section class="contact page">
-
         </section>
         <!--contact page-->
     </div>
