@@ -55,6 +55,11 @@ li {
     list-style-type: none;
 }
 
+input:hover,
+button:hover {
+    cursor: pointer;
+}
+
 .background-img {
     min-height: 100%;
     min-width: 100%;
@@ -172,6 +177,7 @@ li {
 
 .nav-container {
     width: 100%;
+    z-index: 9;
     position: fixed;
     display: flex;
     background-color: #1e3b49;
@@ -293,19 +299,20 @@ li {
     transform: translateX("-30px");
 }
 
+.about-img-fadein-animation, 
 .span-fadein-animation {
     visibility: visible;
     transform: translateX("30px");
     transition: 1s;
-    animation: fadeIn 2000ms steps(29, end) both;
+    animation: fadeIn 1000ms steps(29, end) both;
 }
 
-.portfoilio-img-container {
+.portfolio-img-container {
     padding: 0 4vh 2vh 4vh;
     /*transform: rotateY(180deg);*/
 }
 
-.portfoilio-img-container img {
+.portfolio-img-container img {
     max-width: 100%;
     max-height: 100%;
 }
@@ -340,7 +347,7 @@ li {
     white-space: nowrap;
 }
 
-.comment-container{
+.comment-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -350,13 +357,13 @@ li {
     min-width: 100vw;
 }
 
-.comment-container > span {
+.comment-container>span {
     text-align: center;
     font-size: 30px;
     color: white;
 }
 
-.comment-container > span:first-of-type {
+.comment-container>span:first-of-type {
     font-size: 50px;
     font-weight: 700;
 }
@@ -458,7 +465,9 @@ li {
     display: flex;
 }
 
-.about img {}
+.about img {
+
+}
 
 .about section {
     padding: 1em;
@@ -477,19 +486,42 @@ li {
 .form-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 10px 6vw;
+    align-items: flex-end;
+    padding: 0 6vw 10px 6vw;
+}
+
+.form-container>label {
+    font-size: 30px;
+    color: #18a1b9;
+    padding: 0 17px 3px 17px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-container>label:after {
+    position: absolute;
+    border-bottom: #18a1b9 2px solid;
+    content: "";
+    width: 30%;
+    right: 0;
+    bottom: 0;
 }
 
 .form-container>input {
     text-align: right;
-    font-size: 20px;
+    font-size: 30px;
     margin: 5px 0;
     padding: 0 17px 3px 0;
     border: none;
     border-bottom: #18a1b9 2px solid;
+    width: 100%;
+    overflow: visible;
 }
 
-.form-container>button{
-    width: auto;
+
+.form-container>button {
+    width: fit-content;
+    padding-top: 0;
+    margin-top: 10px;
 }

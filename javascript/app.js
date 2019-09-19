@@ -5,10 +5,17 @@ function cl(x) {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
+
     navOpener();
     setTimeout(typeWriter, 500);
     fadeInFunc("img-fader");
     fadeInFunc("span-fader");
+    $("[href^='#']").click(function () {
+        id = $(this).attr("href")
+        $('html, body').animate({
+            scrollTop: $(id).offset().top -70
+        }, 1000);
+    });
 });
 
 function myFunction(x) {
@@ -88,7 +95,9 @@ function fadeInFunc(fadingInClass) {
             true;
         } else if (inView(x[i])) {
             /*x[i].classList.add("apear");*/
-            if (x[i].tagName != "SPAN") {
+            if (x[i].id == "about-img") {
+                setTimeout(x[i].classList.add("about-img-fadein-animation"), 300);
+            } else if (x[i].tagName != "SPAN") {
                 setTimeout(x[i].classList.add("img-fadein-animation"), 300);
             } else {
                 setTimeout(x[i].classList.add("span-fadein-animation"), 300);
@@ -105,6 +114,7 @@ function tiltButtonFunc (tiltingButton) {
 }
 
 window.onload = function () {
+
 /*
     setTimeout(typeWriter, 500);
     fadeInFunc("img-fader");
