@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             scrollTop: $(id).offset().top - 70
         }, 1000);
         checkIfNavOpen();
+        menuIconToggle(document.getElementById("menu-icon"));
     });
 });
 
-function myFunction(x) {
+function menuIconToggle(x) {
     x.classList.toggle("change");
 }
 
