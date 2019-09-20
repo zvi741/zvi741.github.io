@@ -32,7 +32,7 @@ function checkIfNavOpen() {
 
     } else {
 
-        document.getElementById("nav").style.transform = "translate(0, -200px)";
+        document.getElementById("nav").style.transform = "translate(0, -250px)";
         nav_is_open = false;
     };
 }
