@@ -11,10 +11,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     fadeInFunc("img-fader");
     fadeInFunc("span-fader");
     $("[href^='#']").click(function () {
-        id = $(this).attr("href")
+        id = $(this).attr("href");
         $('html, body').animate({
-            scrollTop: $(id).offset().top -70
+            scrollTop: $(id).offset().top - 70
         }, 1000);
+        checkIfNavOpen();
     });
 });
 
@@ -22,20 +23,26 @@ function myFunction(x) {
     x.classList.toggle("change");
 }
 
+function checkIfNavOpen() {
+
+    if (nav_is_open == false) {
+
+        document.getElementById("nav").style.transform = "translate(0, 12vh)";
+        nav_is_open = true;
+
+    } else {
+
+        document.getElementById("nav").style.transform = "translate(0, -200px)";
+        nav_is_open = false;
+    };
+}
+
 function navOpener() {
 
     menu_icon = document.getElementById("menu-icon");
     menu_icon.addEventListener("click", function () {
 
-        if (nav_is_open == false) {
-
-            document.getElementById("nav").style.transform = "translate(0, 13vh)";
-            nav_is_open = true;
-        } else {
-
-            document.getElementById("nav").style.transform = "translate(0, -500px)";
-            nav_is_open = false;
-        }
+        checkIfNavOpen();
     });
 }
 
@@ -106,7 +113,7 @@ function fadeInFunc(fadingInClass) {
     };
 }
 
-function tiltButtonFunc (tiltingButton) {
+function tiltButtonFunc(tiltingButton) {
     var button = document.getElementById(tiltingButton);
     if (inView(button)) {
         setTimeout(button.classList.add("button-fadein-animation"), 300);
@@ -115,10 +122,10 @@ function tiltButtonFunc (tiltingButton) {
 
 window.onload = function () {
 
-/*
-    setTimeout(typeWriter, 500);
-    fadeInFunc("img-fader");
-    fadeInFunc("span-fader");*/
+    /*
+        setTimeout(typeWriter, 500);
+        fadeInFunc("img-fader");
+        fadeInFunc("span-fader");*/
 };
 
 $(window).scroll(function () {
