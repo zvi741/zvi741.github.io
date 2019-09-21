@@ -176,23 +176,31 @@ button:hover {
 }
 
 .nav-container {
+    top: 13vh;
     width: 100%;
     z-index: 9;
     position: fixed;
     display: flex;
     background-color: #1e3b49;
     justify-content: flex-end;
-    transform: translate(0, -500px);
+    height: 0;
     transition: 0.3s;
+    /*transition: 0.3s;*/
+    overflow: hidden;
+    /*
+    transform: translate(0, -500px);
+    transition: 0.3s;*/
     /*
     transform: translateY(-50px);
     transform: translateZ(-1);*/
 }
 
+.nav-container2 {
+    display: none;
+}
+
 .navbar {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 120px;
+    padding: 20px 20px 120px 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -202,8 +210,6 @@ button:hover {
     text-align: right;
     padding-bottom: 12px;
     font-size: 25px;
-
-    transition: 0.3s;
     color: #18a1b9;
     font-weight: 600;
     display: block;
@@ -271,7 +277,6 @@ button:hover {
 .porfolio {
     background-color: white;
     flex-direction: column;
-
 }
 
 /*k
@@ -294,12 +299,12 @@ button:hover {
     font-weight: 800;
     font-size: 40px;
     border-right: 4px solid #18a1b9;
-    margin: 8vh 4vh 3vh 0;
-    padding: 0 2vh 2vh 0vh;
+    margin: 8vw 4vw 3vw 0;
+    padding: 0 2vw 2vw 0vw;
     transform: translateX("-30px");
 }
 
-.about-img-fadein-animation, 
+.about-img-fadein-animation,
 .span-fadein-animation {
     visibility: visible;
     transform: translateX("30px");
@@ -308,13 +313,15 @@ button:hover {
 }
 
 .portfolio-img-container {
-    padding: 0 4vh 2vh 4vh;
-    /*transform: rotateY(180deg);*/
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
 }
 
 .portfolio-img-container img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    padding: 0vh 4vh 2vh 4vh;
 }
 
 .img-fadein-animation {
@@ -354,7 +361,7 @@ button:hover {
     align-items: center;
     margin: 40px 0;
     padding: 0 20px;
-    min-width: 100vw;
+    min-width: 100%;
 }
 
 .comment-container>span {
@@ -465,9 +472,7 @@ button:hover {
     display: flex;
 }
 
-.about img {
-
-}
+.about img {}
 
 .about section {
     padding: 1em;
@@ -524,4 +529,10 @@ button:hover {
     width: fit-content;
     padding-top: 0;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+    }
+    
 }

@@ -28,12 +28,16 @@ function checkIfNavOpen() {
 
     if (nav_is_open == false) {
 
-        document.getElementById("nav").style.transform = "translate(0, 12vh)";
+        /*document.getElementById("nav").style.transform = "translate(0, 12vh)";*/
+        document.getElementById("nav").style.height = "30%";
+
         nav_is_open = true;
 
     } else {
 
-        document.getElementById("nav").style.transform = "translate(0, -250px)";
+        /*document.getElementById("nav").style.transform = "translate(0, -250px)";*/
+
+        document.getElementById("nav").style.height = "0%";
         nav_is_open = false;
     };
 }

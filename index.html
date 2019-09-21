@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tzvi Zarhin</title>
     <link rel="stylesheet" type="text/css" href=".\css\mobile-style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href=".\css\desktop-style.css" />
     <link rel="stylesheet" type="text/css" href=".\fonts\foundation-icons\foundation-icons.css" />
     <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,6 +49,14 @@
                 <li><a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
+        <nav class="nav-container nav-container2" id="nav2">
+            <ul class="navbar">
+                <li><a href="#home">דף הבית</a></li>
+                <li><a href="#portfolio">תיק עבודות</a></li>
+                <li><a href="#about">קצת עלי</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
 
         <section class="home page" id="home">
             <div class="home-container">
@@ -60,16 +69,12 @@
 
         <section class="porfolio page" id="portfolio">
             <span class="page-span span-fader">תיק עבודות</span>
-            <div class="portfolio-img-container img-fader">
-                <img src="./images/page_image_1.jpg">
-            </div>
-            <div class="portfolio-img-container img-fader">
-                <img src="./images/page_image_2.jpg">
+            <div class="portfolio-img-container ">
+                <img class="img-fader" src="./images/page_image_1.jpg">
+                <img class="img-fader" src="./images/page_image_2.jpg">
             </div>
             <div class="portfolio-img-container img-fader">
                 <img src="./images/page_image_3.jpg">
-            </div>
-            <div class="portfolio-img-container img-fader" id="portfolio">
                 <img src="./images/page_image_4.jpg">
             </div>
         </section>
