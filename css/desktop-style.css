@@ -31,17 +31,25 @@
 
 
 .portfolio-img-container {
+    position: relative;
     display: flex;
     max-width: 100%;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0;
+    padding: 0 0 1vh 0;
 }
 
 .portfolio-img-container img {
     max-width: 50%;
     height: auto;
     padding: 0vh 1vh 1vh 1vh;
+    transition: all .2s ease-in-out;
+}
+
+.portfolio-img-container img:hover {
+    cursor: pointer;
+    scale: 110%;
+    transform: scale(1.02);
 }
 
 @media screen and (min-width: 1100px) {
