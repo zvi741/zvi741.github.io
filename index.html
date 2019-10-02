@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tzvi Zarhin</title>
     <link rel="stylesheet" type="text/css" href=".\css\mobile-style.css" />
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href=".\css\desktop-style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href=".\css\desktop-style.css" />
     <link rel="stylesheet" type="text/css" href=".\fonts\foundation-icons\foundation-icons.css" />
     <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,9 +20,41 @@
 
 <body>
     <img class="background-img" src=".\\images\\mobile-background.jpg">
-    <div class="main-wrapper">
+    <div class="main-wrapper" id="main-wrapper">
+
+        <div class="slideshow-container" id="slideshow-container">
+            
+            <div class="slides-container">
+
+                <div class="x-container" onclick="closeSlides()" style="color: white; display: flex; flex-direction: row; justify-content: center; cursor: pointer; font-size: 30px; padding: 3vh;">
+                    <i class="fi-x"></i>
+                </div>
+
+                <button class="slide-button slide-button-right" onclick="nextSlide()">❯</button>
+
+                <button class="slide-button slide-button-left" onclick="prevSlide()">❮</button>
+
+                <div class="slides">
+                    <div class="slide" id="page_image_1">
+                        <img src="./images/page_image_1.jpg" alt="" style="max-height: 100%; max-width: 90%;" class="slide-img">
+                    </div>
+                    <div class="slide" id="page_image_2">
+                        <img src="./images/page_image_2.jpg" alt="" style="max-height: 100%; max-width:100%;" class="slide-img">
+                    </div>
+                    <div class="slide" id="page_image_3">
+                        <img src="./images/page_image_3.jpg" alt="" style="max-height: 100%; max-width: 100%;" class="slide-img">
+                    </div>
+                    <div class="slide" id="page_image_4">
+                        <img src="./images/page_image_4.jpg" alt="" style="max-height: 100%; max-width: 100%;" class="slide-img">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
         <div class='menu-container'>
             <div class="menu">
+
                 <div class="img-container" onclick="myFunction(this)">
                     <img src="./images/logo.png" alt="TZ" style='max-width: 50px; max-height: 50px'>
                 </div>
@@ -41,6 +73,7 @@
             <!--menu-->
         </div>
         <!--menu-container1-->
+
         <nav class="nav-container" id="nav">
             <ul class="navbar">
                 <li><a href="#home">דף הבית</a></li>
@@ -49,6 +82,8 @@
                 <li><a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
+        <!--nav-container-->
+
         <nav class="nav-container nav-container2" id="nav2">
             <ul class="navbar">
                 <li><a href="#home">דף הבית</a></li>
@@ -57,6 +92,7 @@
                 <li><a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
+        <!--nav-container-2-->
 
         <section class="home page" id="home">
             <div class="home-container">
@@ -70,16 +106,16 @@
         <section class="porfolio page" id="portfolio">
             <span class="page-span span-fader">תיק עבודות</span>
             <div class="portfolio-img-container ">
-                <img class="img-fader" src="./images/page_image_1.jpg">
-                <img class="img-fader" src="./images/page_image_2.jpg">
+                <img class="img-fader" src="./images/page_image_1.jpg" onclick="expandImg(this)">
+                <img class="img-fader" src="./images/page_image_2.jpg" onclick="expandImg(this)">
             </div>
             <div class="portfolio-img-container img-fader">
-                <img src="./images/page_image_3.jpg">
-                <img src="./images/page_image_4.jpg">
+                <img src="./images/page_image_3.jpg" onclick="expandImg(this)">
+                <img src="./images/page_image_4.jpg" onclick="expandImg(this)">
             </div>
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <!--<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-            </div>
+            -->
         </section>
         <!--porfolio page-->
 

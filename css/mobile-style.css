@@ -219,6 +219,16 @@ button:hover {
     color: #f1f1f1;
 }
 
+#page_image_1,
+#page_image_2,
+#page_image_3,
+#page_image_4,
+.slide-button {
+    display: none;
+}
+
+
+
 .page {
     display: flex;
     justify-content: center;
@@ -354,6 +364,10 @@ button:hover {
     white-space: nowrap;
 }
 
+.comments-container::-webkit-scrollbar {
+    display: none; 
+}
+
 .comment-container {
     display: flex;
     flex-direction: column;
@@ -362,6 +376,7 @@ button:hover {
     margin: 40px 0;
     padding: 0 20px;
     min-width: 100%;
+    
 }
 
 .comment-container>span {
@@ -531,8 +546,3 @@ button:hover {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 600px) {
-    .nav-container {
-    }
-    
-}

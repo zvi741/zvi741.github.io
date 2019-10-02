@@ -142,4 +142,60 @@ $(window).scroll(function () {
 
 
 /*Slideshow*/
+var currentSlide = undefined;
 
+function nextSlide() {
+    document.getElementById(currentSlide).style.display = "none";
+
+    imageNumber = (currentSlide.split('_')[2]);
+    imageStartName = 'page_image_'
+
+    imageNumber = parseInt(imageNumber) % 4 + 1;
+    console.log(imageNumber);
+    document.getElementById(imageStartName + imageNumber).style.display = "initial";
+    currentSlide = imageStartName + imageNumber;
+}
+
+
+function expandImg(x) {
+    document.getElementById("slideshow-container").style.display = "initial";
+    imageArray = x.src.split('/');
+    imageName = imageArray[imageArray.length - 1].split('.')[0];
+    console.log(imageName);
+
+    currentSlide = imageName;
+    document.getElementById(imageName).style.display = "initial";
+
+    /*
+    var x = document.createElement("IMG");
+    x.setAttribute("src", "./images/page_image_1.jpg");
+    x.setAttribute("width", "75%");
+    x.setAttribute("height", "auto");
+    x.setAttribute("alt", "The Pulpit Rock");
+    x.style.position = "fixed";
+
+    x.style.margin = "0 25vw 0 0";
+    x.style.zindex = "45";
+    document.body.insertBefore(x, document.getElementById("main-wrapper"));
+
+    */
+    /*
+    document.body.appendChild(x);*/
+
+
+    /*
+        x.style.position = "absolute";
+        x.style.transition = "all .3s ease -in";
+        x.style.opacity = "1";
+        x.style.transform ="scale(2)";
+        x.style.zindex = "20";*/
+}
+
+
+function closeSlides() {
+    document.getElementById("slideshow-container").style.display = "none";
+    for (let index = 1; index < 5; index++) {
+        let image = "page_image_" + index;  
+        document.getElementById(image).style.display = "none";
+    }
+}
